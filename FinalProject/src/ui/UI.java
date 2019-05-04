@@ -30,9 +30,9 @@ public class UI extends javax.swing.JFrame {
 
         jMenuBar2 = new javax.swing.JMenuBar();
         jMenu3 = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
-        jMenuItem2 = new javax.swing.JMenuItem();
-        jMenuItem3 = new javax.swing.JMenuItem();
+        mCrearUser = new javax.swing.JMenuItem();
+        mCargarUser = new javax.swing.JMenuItem();
+        mBorrarUser = new javax.swing.JMenuItem();
         jMenu4 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -46,19 +46,29 @@ public class UI extends javax.swing.JFrame {
             }
         });
 
-        jMenuItem1.setText("Crear Partida");
-        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+        mCrearUser.setText("Crear Partida");
+        mCrearUser.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem1ActionPerformed(evt);
+                mCrearUserActionPerformed(evt);
             }
         });
-        jMenu3.add(jMenuItem1);
+        jMenu3.add(mCrearUser);
 
-        jMenuItem2.setText("Cargar Partida");
-        jMenu3.add(jMenuItem2);
+        mCargarUser.setText("Cargar Partida");
+        mCargarUser.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mCargarUserActionPerformed(evt);
+            }
+        });
+        jMenu3.add(mCargarUser);
 
-        jMenuItem3.setText("Borrar Partida");
-        jMenu3.add(jMenuItem3);
+        mBorrarUser.setText("Borrar Partida");
+        mBorrarUser.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mBorrarUserActionPerformed(evt);
+            }
+        });
+        jMenu3.add(mBorrarUser);
 
         jMenuBar2.add(jMenu3);
 
@@ -85,12 +95,26 @@ public class UI extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenu3ActionPerformed
 
-    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+    private void mCrearUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mCrearUserActionPerformed
         // TODO add your handling code here:
         CrearUsuario usernuevo = new CrearUsuario(this,false);
         usernuevo.setVisible(true);
         usernuevo.setLocationRelativeTo(null);
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
+    }//GEN-LAST:event_mCrearUserActionPerformed
+
+    private void mCargarUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mCargarUserActionPerformed
+        // TODO add your handling code here:
+        CargarUsuario userload = new CargarUsuario(this,false);
+        userload.setVisible(true);
+        userload.setLocationRelativeTo(null);
+    }//GEN-LAST:event_mCargarUserActionPerformed
+
+    private void mBorrarUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mBorrarUserActionPerformed
+        // TODO add your handling code here:
+        BorrarUsuario userkiller = new BorrarUsuario(this,false);
+        userkiller.setVisible(true);
+        userkiller.setLocationRelativeTo(null);
+    }//GEN-LAST:event_mBorrarUserActionPerformed
 
     /**
      * @param args the command line arguments
@@ -131,8 +155,8 @@ public class UI extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
     private javax.swing.JMenuBar jMenuBar2;
-    private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem3;
+    private javax.swing.JMenuItem mBorrarUser;
+    private javax.swing.JMenuItem mCargarUser;
+    private javax.swing.JMenuItem mCrearUser;
     // End of variables declaration//GEN-END:variables
 }

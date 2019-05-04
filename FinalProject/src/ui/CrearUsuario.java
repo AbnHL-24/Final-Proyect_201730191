@@ -29,26 +29,29 @@ public class CrearUsuario extends javax.swing.JDialog {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        btAgregar = new javax.swing.JButton();
+        btLimpiar = new javax.swing.JButton();
+        btRegresarCU = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        tfInsertName = new javax.swing.JTextField();
+        cbSelectV1 = new javax.swing.JComboBox<>();
+        cbSelectV2 = new javax.swing.JComboBox<>();
+        cbSelectv3 = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Crear Partida");
         setAlwaysOnTop(true);
         setResizable(false);
 
-        jButton1.setText("Agregar");
+        btAgregar.setText("Agregar");
 
-        jButton2.setText("Limpiar");
+        btLimpiar.setText("Limpiar");
 
-        jButton3.setText("Regresar");
+        btRegresarCU.setText("Regresar");
 
         jLabel1.setText("Nombre De Usuario");
 
@@ -60,7 +63,14 @@ public class CrearUsuario extends javax.swing.JDialog {
 
         jLabel5.setText("Crear Nueva Partida");
 
-        jTextField1.setText("jTextField1");
+        cbSelectV1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tanque", "Avion" }));
+        cbSelectV1.setSelectedIndex(-1);
+
+        cbSelectV2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tanque", "Avion" }));
+        cbSelectV2.setSelectedIndex(-1);
+
+        cbSelectv3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tanque", "Avion" }));
+        cbSelectv3.setSelectedIndex(-1);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -68,28 +78,31 @@ public class CrearUsuario extends javax.swing.JDialog {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton3)
+                .addComponent(btRegresarCU)
                 .addGap(18, 18, 18)
-                .addComponent(jButton2)
+                .addComponent(btLimpiar)
                 .addGap(18, 18, 18)
-                .addComponent(jButton1)
+                .addComponent(btAgregar)
                 .addContainerGap())
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(65, 65, 65)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel4)
+                    .addComponent(jLabel3))
+                .addGap(48, 48, 48)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel4)
-                            .addComponent(jLabel3))
-                        .addGap(0, 0, Short.MAX_VALUE))
+                            .addComponent(cbSelectV1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(tfInsertName, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(41, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel1)
-                                .addGap(48, 48, 48)
-                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addContainerGap(41, Short.MAX_VALUE))))
+                            .addComponent(cbSelectV2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(cbSelectv3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE))))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(142, 142, 142)
                 .addComponent(jLabel5)
@@ -99,22 +112,30 @@ public class CrearUsuario extends javax.swing.JDialog {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(35, 35, 35)
-                .addComponent(jLabel5)
-                .addGap(39, 39, 39)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(20, 20, 20)
-                .addComponent(jLabel2)
-                .addGap(22, 22, 22)
-                .addComponent(jLabel3)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel5)
+                        .addGap(39, 39, 39)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel1)
+                            .addComponent(tfInsertName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(20, 20, 20)
+                        .addComponent(jLabel2)
+                        .addGap(22, 22, 22)
+                        .addComponent(jLabel3))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(cbSelectV1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(cbSelectV2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
-                .addComponent(jLabel4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 57, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2)
-                    .addComponent(jButton3))
+                    .addComponent(jLabel4)
+                    .addComponent(cbSelectv3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btAgregar)
+                    .addComponent(btLimpiar)
+                    .addComponent(btRegresarCU))
                 .addContainerGap())
         );
 
@@ -176,15 +197,18 @@ public class CrearUsuario extends javax.swing.JDialog {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton btAgregar;
+    private javax.swing.JButton btLimpiar;
+    private javax.swing.JButton btRegresarCU;
+    private javax.swing.JComboBox<String> cbSelectV1;
+    private javax.swing.JComboBox<String> cbSelectV2;
+    private javax.swing.JComboBox<String> cbSelectv3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField tfInsertName;
     // End of variables declaration//GEN-END:variables
 }
