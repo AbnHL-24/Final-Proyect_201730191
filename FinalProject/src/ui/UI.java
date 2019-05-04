@@ -5,6 +5,12 @@
  */
 package ui;
 
+import ui.menu.informes.EstadisticaGame;
+import ui.menu.informes.ReportUser;
+import ui.menu.usuario.BorrarUsuario;
+import ui.menu.usuario.CargarUsuario;
+import ui.menu.usuario.CrearUsuario;
+
 /**
  *
  * @author abner
@@ -34,6 +40,8 @@ public class UI extends javax.swing.JFrame {
         mCargarUser = new javax.swing.JMenuItem();
         mBorrarUser = new javax.swing.JMenuItem();
         jMenu4 = new javax.swing.JMenu();
+        mEstadistGame = new javax.swing.JMenuItem();
+        mReportUser = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("ZoneWar");
@@ -72,7 +80,24 @@ public class UI extends javax.swing.JFrame {
 
         jMenuBar2.add(jMenu3);
 
-        jMenu4.setText("Edit");
+        jMenu4.setText("Informes");
+
+        mEstadistGame.setText("Estadisticas Del Juego");
+        mEstadistGame.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mEstadistGameActionPerformed(evt);
+            }
+        });
+        jMenu4.add(mEstadistGame);
+
+        mReportUser.setText("Reportes De Usuario");
+        mReportUser.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mReportUserActionPerformed(evt);
+            }
+        });
+        jMenu4.add(mReportUser);
+
         jMenuBar2.add(jMenu4);
 
         setJMenuBar(jMenuBar2);
@@ -116,6 +141,20 @@ public class UI extends javax.swing.JFrame {
         userkiller.setLocationRelativeTo(null);
     }//GEN-LAST:event_mBorrarUserActionPerformed
 
+    private void mEstadistGameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mEstadistGameActionPerformed
+        // TODO add your handling code here:
+        EstadisticaGame stadistgame = new EstadisticaGame(this,false);
+        stadistgame.setVisible(true);
+        stadistgame.setLocationRelativeTo(null);
+    }//GEN-LAST:event_mEstadistGameActionPerformed
+
+    private void mReportUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mReportUserActionPerformed
+        // TODO add your handling code here:
+        ReportUser rportuser = new ReportUser(this,false);
+        rportuser.setVisible(true);
+        rportuser.setLocationRelativeTo(null);
+    }//GEN-LAST:event_mReportUserActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -158,5 +197,7 @@ public class UI extends javax.swing.JFrame {
     private javax.swing.JMenuItem mBorrarUser;
     private javax.swing.JMenuItem mCargarUser;
     private javax.swing.JMenuItem mCrearUser;
+    private javax.swing.JMenuItem mEstadistGame;
+    private javax.swing.JMenuItem mReportUser;
     // End of variables declaration//GEN-END:variables
 }

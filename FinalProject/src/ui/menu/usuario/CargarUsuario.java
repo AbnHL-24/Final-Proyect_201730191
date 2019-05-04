@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ui;
+package ui.menu.usuario;
 
 /**
  *
@@ -34,7 +34,6 @@ public class CargarUsuario extends javax.swing.JDialog {
         jTable1 = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(4000, 400));
         setSize(new java.awt.Dimension(500, 400));
 
         jButton1.setText("Cargar");
