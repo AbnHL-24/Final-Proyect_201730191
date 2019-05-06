@@ -1,5 +1,5 @@
 
-import ui.UI;
+import frontend.UI;
 
 /*
  * To change this license header, choose License Headers in Project Properties.

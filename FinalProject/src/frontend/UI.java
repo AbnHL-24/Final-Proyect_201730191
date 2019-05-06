@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ui;
+package frontend;
 
-import ui.menu.informes.EstadisticaGame;
-import ui.menu.informes.ReportUser;
-import ui.menu.usuario.BorrarUsuario;
-import ui.menu.usuario.CargarUsuario;
-import ui.menu.usuario.CrearUsuario;
+import frontend.menu.informes.EstadisticaGame;
+import frontend.menu.informes.ReportUser;
+import frontend.menu.usuario.BorrarUsuario;
+import frontend.menu.usuario.CargarUsuario;
+import frontend.menu.usuario.CrearUsuario;
 
 /**
  *
